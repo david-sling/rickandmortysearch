@@ -23,9 +23,9 @@ export default function Search({setCharacter}) {
         alert(error)
     },[error])
 
-    useEffect(()=>{
-        console.log({results, info})
-    },[results, info])
+    // useEffect(()=>{
+    //     console.log({results, info})
+    // },[results, info])
 
     const getNewData = async () => {
 
