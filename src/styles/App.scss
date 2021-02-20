@@ -81,6 +81,12 @@ h1{
     background: white;
     padding: 20px 40px;
     margin: 20px 0;
+    cursor: pointer;
+    transition: .2s;
+
+    &:hover{
+      box-shadow: inset 3px 3px 10px 0 #00000045;
+    }
 
     @include phone(){
       padding: 10px 20px;
