@@ -11,8 +11,8 @@ Search information about rick and morty characters
 * `npm start`
 
 ### To see live Demo:
-* Click [here](https://rickandmortydemo.davidsling.in)
-* <https://rickandmortydemo.davidsling.in>
+* Click [here](https://rickandmortydemo.netlify.app)
+* <https://rickandmortydemo.netlify.app>
 
 ---
 
