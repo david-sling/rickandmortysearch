@@ -4,6 +4,13 @@
   }
 }
 
+@keyframes riseup{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -43,6 +50,11 @@ h1{
     width: 100%;
     top: 0;
     display: flex;
+    flex-direction: column;
+    p{
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
 
   input{
@@ -166,6 +178,7 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: riseup .2s;
   .closeIcon{
     position: absolute;
     top: 0;

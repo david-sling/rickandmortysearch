@@ -67,6 +67,7 @@ export default function Search({setCharacter}) {
                     value={search}
                     onChange={ (e)=>setSearch(e.target.value) }
                 />
+                <p>Showing {results.length} of {info.count} results</p>
             </div>
             {/* <button onClick={ getNextPage } >nextPage</button> */}
             {(results&&info)&&<div className="dataList">
