@@ -2,6 +2,7 @@
 Created using React JS
 
 Search information about rick and morty characters
+
 ---
 
 ### To install and run:
