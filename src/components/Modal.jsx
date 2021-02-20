@@ -5,6 +5,7 @@ export default function Modal({ character, setCharacter }) {
         <div className="Modal" >
             <div className="close" onClick={()=>setCharacter(null)} ></div>
             <div className="dialog">
+                <div className="closeIcon" onClick={()=>setCharacter(null)} >X</div>
                 <div className="top">
                     <div className="image">
                         <img src={character.image} alt=""/>

@@ -166,6 +166,13 @@ h1{
   display: flex;
   align-items: center;
   justify-content: center;
+  .closeIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    cursor: pointer;
+  }
   .close{
     position: absolute;
     top: 0;
@@ -180,6 +187,7 @@ h1{
     padding: 50px;
     border-radius: 10px;
     z-index: 1;
+    position: relative;
     .top{
       display: flex;
       align-items: center;

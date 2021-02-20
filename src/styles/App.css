@@ -200,6 +200,14 @@ h1 {
           justify-content: center;
 }
 
+.Modal .closeIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  cursor: pointer;
+}
+
 .Modal .close {
   position: absolute;
   top: 0;
@@ -214,6 +222,7 @@ h1 {
   padding: 50px;
   border-radius: 10px;
   z-index: 1;
+  position: relative;
 }
 
 .Modal .dialog .top {
