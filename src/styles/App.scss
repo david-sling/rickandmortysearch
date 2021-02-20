@@ -74,6 +74,7 @@ h1{
     padding: 20px;
     height: 80%;
     overflow: scroll;
+    align-items: center;
     // flex: 1;
   }
 
@@ -254,4 +255,10 @@ h1{
     }
   }
 
+}
+
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

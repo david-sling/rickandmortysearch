@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 import ResultCard from './ResultCard'
+import Loader from '../assets/loader.svg'
 
 export default function Search({setCharacter}) {
 
@@ -46,6 +47,7 @@ export default function Search({setCharacter}) {
     }
 
     const getNextPage = async () => {
+        setLoading(true)
         if(loading) return null
         else if (info.count==results.length){
             // setError('End of Results')
@@ -56,6 +58,7 @@ export default function Search({setCharacter}) {
             setResults( prevResults=> [ ...prevResults, ...data.data.results ] )
             setInfo(data.data.info)
         }
+        setLoading(false)
     }
 
     return (
@@ -81,7 +84,8 @@ export default function Search({setCharacter}) {
                 >
                     <div className="loader">
                         {loading
-                            ?<p>LOADING...</p>
+                            // ?<p>LOADING...</p>
+                            ?<img style={{height: 40}} src={Loader} alt=""/>
                             :<button onClick={ getNextPage } >{info.count==results.length?'End of Results':'Load more'}</button>
                         }
                     </div>
