@@ -1,0 +1,230 @@
+@mixin phone {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.App{
+  width: 100vw;
+  overflow: hidden;
+  // padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(235, 235, 235);
+  height: 100vh;
+}
+
+h1{
+  text-align: center;
+  margin: 20px;
+  @include phone(){
+    font-size: 1.5rem;
+  }
+}
+
+.Search{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  height: 100%;
+
+  .fixed{
+    // position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+  }
+
+  input{
+    padding: 20px;
+    width: 100%;
+    margin: 20px;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: .2s;
+    &:focus{
+      outline: none;
+      border-bottom: 2px solid green;
+    }
+  }
+  .dataList{
+    width: 100%;
+    padding: 20px;
+    height: 80%;
+    overflow: scroll;
+    // flex: 1;
+  }
+
+  button{
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: white;
+    margin: 20px 0;
+  }
+
+  .ResultCard{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 20px 40px;
+    margin: 20px 0;
+
+    @include phone(){
+      padding: 10px 20px;
+      margin: 10px 0;
+    }
+
+    .left, .right{
+      display: flex;
+      align-items: center;
+    }
+
+    .left{
+      @include phone(){
+
+        // max-width: 0%;
+      }
+      img{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 20px 0 0;
+        @include phone(){
+          height: 50px;
+          width: 50px;
+          // margin: 0;
+        }
+        // img{
+        //   height: 100%;
+        //   width: 100%;
+        // }
+      }
+      .image{
+        height: 100px;
+        width: 100px;
+        @include phone(){
+          height: 50px;
+          width: 50px;
+        }
+      }
+      h3{
+        margin-left: 20px;
+        @include phone(){
+          font-size: 1rem;
+        }
+      }
+    }
+    .right{
+      // flex: 1;
+      p{
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+.dot{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  // margin: 20px;
+  background: rgb(146, 146, 146);
+
+  &.Alive{
+    background: rgb(7, 233, 7);
+  }
+  &.Dead{
+    background: rgb(228, 9, 9);
+  }
+}
+
+.Modal{
+  position: fixed;
+  background: rgba(0, 0, 0, 0.582);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // background: grey;
+    z-index: 0;
+  }
+  .dialog{
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    z-index: 1;
+    .top{
+      display: flex;
+      align-items: center;
+  
+      .image{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .head{
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+
+        .details{
+          display: flex;
+          align-items: center;
+          margin: 10px 0;
+          p{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    .divider{
+      background: grey;
+      height: 1px;
+      width: 100%;
+      margin: 20px 10px;
+    }
+    .bottom{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .field{
+        margin-bottom: 50px;
+        padding: 20px;
+        p.title{
+          font-size: .8rem;
+          color: grey;
+        }
+        p.value{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+}
